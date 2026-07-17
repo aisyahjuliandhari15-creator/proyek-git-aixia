@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Animated Gradient Navbar</title>
+    <style>
+        /*
+        ========================================
+        CSS Custom Properties (Gradient Theme)
+        ========================================
+        */
+        :root {
+            --grad-color-1: #ee7752;
+            --grad-color-2: #e73c7e;
+            --grad-color-3: #23a6d5;
+            --grad-color-4: #23d5ab;
+            
+            --color-text-on-grad: #ffffff;
+            --color-link-highlight: rgba(255, 255, 255, 0.15);
+            --color-cta-bg: rgba(0, 0, 0, 0.2);
+            --color-focus-outline: #ffffff;
+
+            --font-family-sans-serif: "Poppins", system-ui, -apple-system, sans-serif;
+            --font-weight-bold: 600;
+
+            --navbar-height: 75px;
+            --navbar-padding: 1.5rem;
+            --container-width: 1140px;
+            --transition-speed: 0.3s;
+            --animation-speed-gradient: 15s;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            margin: 0; font-family: var(--font-family-sans-serif);
+            font-size: 1rem; line-height: 1.6;
+        }
+        
+        .content { height: 200vh; padding: 120px 2rem; text-align: center; }
+        ul { list-style: none; margin: 0; padding: 0; }
+        a { text-decoration: none; color: inherit; }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .navbar {
+            height: var(--navbar-height); display: flex; align-items: center;
+            color: var(--color-text-on-grad);
+            background: linear-gradient(-45deg, var(--grad-color-1), var(--grad-color-2), var(--grad-color-3), var(--grad-color-4));
+            background-size: 400% 400%;
+            animation: gradient-animation var(--animation-speed-gradient) ease infinite;
+        }
+        .navbar__container { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 var(--navbar-padding); }
+        .navbar__brand, .navbar__link { text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); }
+        .navbar__brand { font-size: 1.75rem; font-weight: var(--font-weight-bold); }
+        .navbar__toggle { display: block; border: none; padding: 0.5rem; background: transparent; cursor: pointer; z-index: 1001; color: inherit; }
+        .navbar__toggle .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--color-text-on-grad); border-radius: 2px; transition: all var(--transition-speed) ease; }
+        .navbar__toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .navbar__toggle.is-active .bar:nth-child(2) { opacity: 0; }
+        .navbar__toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        
+        .navbar__menu { display: none; flex-direction: column; width: 100%; position: absolute; top: var(--navbar-height); left: 0; background-color: var(--grad-color-3); box-shadow: 0 8px 16px rgba(0,0,0,0.15); z-index: 1000; }
+        .navbar__menu.is-active { display: flex; }
+        .navbar__item { text-align: center; }
+        .navbar__link { display: block; padding: 1.5rem; font-weight: var(--font-weight-bold); }
+        .navbar__link:hover, .navbar__link:focus { background-color: var(--color-link-highlight); }
+
+        :is(.navbar__toggle, .navbar__link):focus-visible { outline: 2px solid var(--color-focus-outline); outline-offset: 3px; border-radius: 4px; }
+        
+        @media (min-width: 768px) {
+            .navbar__toggle { display: none; }
+            .navbar__menu { display: flex; flex-direction: row; align-items: center; position: static; width: auto; background: none; box-shadow: none; z-index: auto; }
+            .navbar__list { display: flex; align-items: center; gap: 0.5rem; }
+
+            .navbar__link { padding: 0.5rem 1rem; border-radius: 8px; transition: background-color var(--transition-speed) ease; }
+            .navbar__link:hover, .navbar__link:focus { background-color: var(--color-link-highlight); }
+            
+            /* --- CTA Button with Gradient Border --- */
+            .navbar__item--cta { margin-left: 1rem; }
+
+            .navbar__link--cta {
+                position: relative; /* Needed for the ::before pseudo-element */
+                background-color: var(--color-cta-bg);
+                color: var(--color-text-on-grad);
+                font-weight: var(--font-weight-bold);
+                padding: 0.75rem 1.5rem;
+                text-shadow: none;
+                border: 2px solid transparent; /* Reserve space for the gradient border */
+                transition: background-color var(--transition-speed) ease;
+                z-index: 1; /* Ensures border appears correctly */
+            }
+
+            /* Create the gradient border using a pseudo-element behind the link */
+            .navbar__link--cta::before {
+                content: '';
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                z-index: -1;
+                margin: -2px; /* Negative margin pulls it behind the border */
+                border-radius: inherit; /* Match the parent's border-radius */
+                background: linear-gradient(-45deg, var(--grad-color-1), var(--grad-color-2), var(--grad-color-3), var(--grad-color-4));
+                background-size: 400% 400%;
+                animation: gradient-animation var(--animation-speed-gradient) ease infinite;
+            }
+
+            .navbar__link--cta:hover, .navbar__link--cta:focus {
+                background-color: transparent;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .navbar, .navbar__link--cta::before { animation: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="#" class="navbar__brand">Chroma</a>
+            
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation" aria-controls="navbarMenu" aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="#" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Products</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Showcase</a></li>
+                    <li class="navbar__item navbar__item--cta">
+                        <a href="#" class="navbar__link navbar__link--cta">Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <h1>Gradient Navbar Example</h1>
+        <p>This navbar features a subtly animated gradient background and a high-contrast CTA.</p>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navbarMenu = document.getElementById('navbarMenu');
+
+            if (navbarToggle && navbarMenu) {
+                navbarToggle.addEventListener('click', function () {
+                    navbarToggle.classList.toggle('is-active');
+                    navbarMenu.classList.toggle('is-active');
+                    
+                    const isExpanded = navbarMenu.classList.contains('is-active');
+                    navbarToggle.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
