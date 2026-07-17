@@ -1,9 +1,9 @@
 ## Judul
-selamat datang di proyek testing git
+Welcome to Projek Aixia
 
 
 ## Deskripsi
-folder git ini isinya latihan tentang git
+File Ini Berisi Latihan Soal Git 
 
 ### jawaban soal
 
