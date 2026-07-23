@@ -1,0 +1,276 @@
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-A)
+$ git switch update-judul-B
+M       bagian-c/desktop.ini
+M       bagian-d/desktop.ini
+M       desktop.ini
+Switched to branch 'update-judul-B'
+gi
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git log
+commit 276cf2bd7a22303383ac1d61eeadc0637cb86923 (HEAD -> update-judul-B, proyek-git-aixia/master, proyek-git-aixia/HEAD, master)
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:31:52 2026 +0700
+
+    Update nomor berikutnya README.md
+
+commit 804d8bde1e8089b288c8ce398ad72a6f2218c234
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:30:40 2026 +0700
+
+    tambahin bagian E
+
+commit 6c892ee4e7880bfc321a1140875b464a303c7023
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:26:29 2026 +0700
+
+    Update README.md
+
+commit 889de4db8cf13ffd51ed34b72488b24b2ee000e6
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:50:42 2026 +0700
+
+    Update README.md
+
+commit f50069fd4cacc51420208595539fc5eb2200cc15
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:50:24 2026 +0700
+
+    Update README.md
+
+commit c0934d28c2dbca97543e8cb0847591fdb08bb8e5
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:32:03 2026 +0700
+
+    Update README.md
+
+commit 277ac19edf4c46e31d7cafe8003ac7bc6e708ba6
+Author: AiXIA <Xia@gmail.com>
+Date:   Wed Jul 22 12:02:09 2026 +0700
+
+    bagian d: 4, 5.1, 5.2, 6
+
+commit 5a2c875c60a161a95e76a2366198fa40ab43ba46
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Fri Jul 17 14:34:42 2026 +0700
+
+    Update README.md
+
+commit 69c6f3b5a8d0ebcfede908585b67df7aee317998
+Author: AiXIA <Xia@gmail.com>
+Date:   Fri Jul 17 14:32:13 2026 +0700
+
+    push jawaban bagian D
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git fetch --all
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 985 bytes | 10.00 KiB/s, done.
+From https://github.com/aisyahjuliandhari15-creator/proyek-git-aixia
+   276cf2b..08c496a  master     -> proyek-git-aixia/master
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=proyek-git-aixia/<branch> update-judul-B
+
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git branch --set-upstream-to=proyek-git-aixia/update-judul-B
+fatal: the requested upstream branch 'proyek-git-aixia/update-judul-B' does not exist
+hint:
+hint: If you are planning on basing your work on an upstream
+hint: branch that already exists at the remote, you may need to
+hint: run "git fetch" to retrieve it.
+hint:
+hint: If you are planning to push out a new local branch that
+hint: will track its remote counterpart, you may want to use
+hint: "git push -u" to set the upstream config as you push.
+hint: Disable this message with "git config set advice.setUpstreamFailure false"
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git branch --set-upstream-to=proyek-git-aixia/update-judul-B
+fatal: the requested upstream branch 'proyek-git-aixia/update-judul-B' does not exist
+hint:
+hint: If you are planning on basing your work on an upstream
+hint: branch that already exists at the remote, you may need to
+hint: run "git fetch" to retrieve it.
+hint:
+hint: If you are planning to push out a new local branch that
+hint: will track its remote counterpart, you may want to use
+hint: "git push -u" to set the upstream config as you push.
+hint: Disable this message with "git config set advice.setUpstreamFailure false"
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ ^[[200~ git push proyek-git-aixia update-judul-A
+bash: $'\E[200~': command not found
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$  git push proyek-git-aixia update-judul-B
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'update-judul-B' on GitHub by visiting:
+remote:      https://github.com/aisyahjuliandhari15-creator/proyek-git-aixia/pull/new/update-judul-B
+remote:
+To https://github.com/aisyahjuliandhari15-creator/proyek-git-aixia.git
+ * [new branch]      update-judul-B -> update-judul-B
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git log
+commit 276cf2bd7a22303383ac1d61eeadc0637cb86923 (HEAD -> update-judul-B, proyek-git-aixia/update-judul-B, master)
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:31:52 2026 +0700
+
+    Update nomor berikutnya README.md
+
+commit 804d8bde1e8089b288c8ce398ad72a6f2218c234
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:30:40 2026 +0700
+
+    tambahin bagian E
+
+commit 6c892ee4e7880bfc321a1140875b464a303c7023
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:26:29 2026 +0700
+
+    Update README.md
+
+commit 889de4db8cf13ffd51ed34b72488b24b2ee000e6
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:50:42 2026 +0700
+
+    Update README.md
+
+commit f50069fd4cacc51420208595539fc5eb2200cc15
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:50:24 2026 +0700
+
+    Update README.md
+
+commit c0934d28c2dbca97543e8cb0847591fdb08bb8e5
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:32:03 2026 +0700
+
+    Update README.md
+
+commit 277ac19edf4c46e31d7cafe8003ac7bc6e708ba6
+Author: AiXIA <Xia@gmail.com>
+Date:   Wed Jul 22 12:02:09 2026 +0700
+
+    bagian d: 4, 5.1, 5.2, 6
+
+commit 5a2c875c60a161a95e76a2366198fa40ab43ba46
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Fri Jul 17 14:34:42 2026 +0700
+
+    Update README.md
+
+commit 69c6f3b5a8d0ebcfede908585b67df7aee317998
+Author: AiXIA <Xia@gmail.com>
+Date:   Fri Jul 17 14:32:13 2026 +0700
+
+    push jawaban bagian D
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git fetch --all
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=proyek-git-aixia/<branch> update-judul-B
+
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git branch --set-upstream-to=proyek-git-aixia/update-judul-B
+branch 'update-judul-B' set up to track 'proyek-git-aixia/update-judul-B'.
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git fetch --all
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 966 bytes | 10.00 KiB/s, done.
+From https://github.com/aisyahjuliandhari15-creator/proyek-git-aixia
+   276cf2b..2179b05  update-judul-B -> proyek-git-aixia/update-judul-B
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git pull
+Updating 276cf2b..2179b05
+Fast-forward
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@LAPTOP-EDO8A23G MINGW64 ~/Downloads/PROJEK-GIT (update-judul-B)
+$ git log
+commit 2179b058af4c4f26524e592ca48c8584cb4dac75 (HEAD -> update-judul-B, proyek-git-aixia/update-judul-B)
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 11:15:03 2026 +0700
+
+    PROYEK GIT - VERSI-B (bagian e)
+
+commit 276cf2bd7a22303383ac1d61eeadc0637cb86923 (master)
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:31:52 2026 +0700
+
+    Update nomor berikutnya README.md
+
+commit 804d8bde1e8089b288c8ce398ad72a6f2218c234
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:30:40 2026 +0700
+
+    tambahin bagian E
+
+commit 6c892ee4e7880bfc321a1140875b464a303c7023
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 09:26:29 2026 +0700
+
+    Update README.md
+
+commit 889de4db8cf13ffd51ed34b72488b24b2ee000e6
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:50:42 2026 +0700
+
+    Update README.md
+
+commit f50069fd4cacc51420208595539fc5eb2200cc15
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:50:24 2026 +0700
+
+    Update README.md
+
+commit c0934d28c2dbca97543e8cb0847591fdb08bb8e5
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Thu Jul 23 08:32:03 2026 +0700
+
+    Update README.md
+
+commit 277ac19edf4c46e31d7cafe8003ac7bc6e708ba6
+Author: AiXIA <Xia@gmail.com>
+Date:   Wed Jul 22 12:02:09 2026 +0700
+
+    bagian d: 4, 5.1, 5.2, 6
+
+commit 5a2c875c60a161a95e76a2366198fa40ab43ba46
+Author: aisyahjuliandhari15-creator <aisyahjuliandhari15@gmail.com>
+Date:   Fri Jul 17 14:34:42 2026 +0700
+
+    Update README.md
+
+commit 69c6f3b5a8d0ebcfede908585b67df7aee317998
