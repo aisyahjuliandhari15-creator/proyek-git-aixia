@@ -1,4 +1,4 @@
-# Proyek Git - Versi B
+# Proyek GIT - Versi B
 WELCOME TO PROJECT AIXIA
 
 
