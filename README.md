@@ -45,3 +45,4 @@ File Ini Berisi Latihan Soal Git
 4. git push <remote> master
 5. git push <remote> fitur-footer
 6. melakukan commit melalui remote repository dan pull di local untuk melihat riwayat komit di local setelah pull dari remote
+### Bagian E
